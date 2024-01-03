@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event</title>
+</head>
+<body>
+    <h2>More Events</h2>
+    <button id="btn-event">Events</button>
+    <input type="text" name="" id="input-field">
+    
+    <script>
+        document.getElementById('input-field').addEventListener('focus', function(){
+            console.log('Input field is in focus');
+        })
+        document.getElementById('input-field').addEventListener('blur', function(){
+            console.log('Input field is in blur');
+        })
+        document.getElementById('input-field').addEventListener('keydown', function(event){
+            console.log(event.target.value);
+        })
+        document.getElementById('input-field').addEventListener('keypress', function(event){
+            console.log(event.target.value);
+        })
+        document.getElementById('input-field').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        })
+        document.getElementById('btn-event').addEventListener('click', function(){
+            console.log('Click');
+        })
+        document.getElementById('btn-event').addEventListener('mousemove', function(){
+            console.log('mousemove');
+        })
+        document.getElementById('btn-event').addEventListener('mouseenter', function(){
+            console.log('mouseenter');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        li{
+           color: rgb(73, 226, 43);
+         }
+         #fruits li{
+            color: black;
+         }
+         .fruit{
+            color: aqua;
+         }
+         #place-container li{
+            color: brown;
+         }  
+    </style>
+</head>
+<body>
+    <header class="lerge-text">
+        <h1>Welcome to my DOM</h1>
+    </header>
+    <main id="main-container">
+        <section id="name">
+            <h1>My awesome DOM</h1>
+            <ul>
+                <li>Emon</li>
+                <li>Shanto</li>
+            </ul>
+        </section>
+        <section id="place-container" class="lerge-text">
+            <h1>My favorite places</h1>
+            <ul id="palces-list">
+                <li>Syhlet</li>
+                <li>Bandarban</li>
+            </ul>
+        </section>
+        <section >
+            <h1>My favourite fruits</h1>
+            <ul id="fruits">
+                <li class="fruit">Jackfruit</li>
+                <li class="fruit">Mango</li>
+            </ul>
+        </section>
+    </main>
+    <script src="append.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+        console.log(allHeadings);
+        for(const h1 of allHeadings){
+            console.log(h1.innerText);
+        }
+
+        const fruits = document.getElementsByClassName('fruit');
+        for(const fruit of fruits){
+            console.log(fruit.innerText);
+            fruit.innerText = 'Lichi';
+        }
+        const Place = document.querySelector('#place-container li');
+            console.log(Place.innerText);
+    
+        const somePlace = document.querySelectorAll('#place-container li')
+        for( const li of somePlace){
+            console.log(li.innerText);
+        }
+
+        document.getElementById('name').style.textAlign= 'center'
+
+    </script>
+    
+</body>
+</html>
